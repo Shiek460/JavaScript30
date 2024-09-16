@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=device-width">
   <title>Array Cardio 💪</title>
   <link rel="icon" href="https://fav.farm/🔥" />
 </head>
@@ -38,7 +38,14 @@
     
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-
+    let oldInventors = inventors.filter((inventor) => {
+      for (inventor of inventors) {
+        if (inventor.year > 1499 && inventor.year < 1600)
+          return true;
+        }
+        return false;
+    });
+    console.log(oldInventors);
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
 
